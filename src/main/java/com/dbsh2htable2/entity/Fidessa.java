@@ -25,6 +25,7 @@ public class Fidessa {
 	*/
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name="TRADE_ID")
