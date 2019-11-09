@@ -1,9 +1,10 @@
 package com.dbsh2htable2.controller;
 
+import com.dbsh2htable2.entity.Extern;
+import com.dbsh2htable2.entity.Fidessa;
 import com.dbsh2htable2.service.ExternService;
 import com.dbsh2htable2.service.FidessaService;
-import entity.Extern;
-import entity.Fidessa;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

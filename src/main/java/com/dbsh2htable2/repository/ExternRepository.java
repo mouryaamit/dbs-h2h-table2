@@ -1,6 +1,7 @@
 package com.dbsh2htable2.repository;
 
-import entity.Extern;
+
+import com.dbsh2htable2.entity.Extern;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
