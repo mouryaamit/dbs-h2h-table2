@@ -1,32 +1,61 @@
 package entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Extern {
 
+	/*
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="empid")
+	private long empId;
+	@Column(name="empname")
+	private String empName;
+	@Column(name="empemail")
+	private String email;
+
+	Exchange ,Unique_Identifier ,Equity ,	Lot,Trade_Type,Intra_Day ,	Price,Deal_ID,DAY_NUM
+
+	*/
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
+	@Column(name="Exchange")
 	private String market;
-	
+
+	@Column(name="Unique_Identifier")
 	private String uniqueIdentifier;
-	
+
+	@Column(name="Equity")
 	private String equity;
-	
+
+	@Column(name="Lot")
 	private String tradedQuntity;
-	
+	@Column(name="Trade_Type")
 	private String tradeType;
-	
+
+	@Column(name="Intra_Day")
 	private String intraDay;
-	
+
+	@Column(name="Price")
 	private Double price;
-	
+
+	public int getDayNum() {
+		return dayNum;
+	}
+
+	public void setDayNum(int dayNum) {
+		this.dayNum = dayNum;
+	}
+
+	@Column(name="Deal_ID")
 	private String dealId;
+
+	@Column(name="DAY_NUM")
+	private int dayNum;
 
 	public Long getId() {
 		return id;

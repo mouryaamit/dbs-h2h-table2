@@ -3,44 +3,57 @@ package entity;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Fidessa {
 
+	/*
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="empid")
+	private long empId;
+	@Column(name="empname")
+	private String empName;
+	@Column(name="empemail")
+	private String email;
+
+	TRADE_ID,STOCK_NAME,ISIN,QUANTITY,BS_IND,PRICE,EXCHANGE,DAY_NUM
+
+	*/
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
-	
+
+	@Column(name="TRADE_ID")
 	private String tradeId;
-	
+	@Column(name="STOCK_NAME")
 	private String stockName;
-	
+	@Column(name="ISIN")
 	private String isin;
-	
+	@Column(name="QUANTITY")
 	private Long quantity;
-	
+	@Column(name="BS_IND")
 	private String buySellIndicator;
-	
+	@Column(name="PRICE")
 	private Double price;
-	
+
+	public int getDayNum() {
+		return dayNum;
+	}
+
+	public void setDayNum(int dayNum) {
+		this.dayNum = dayNum;
+	}
+
+	@Column(name="EXCHANGE")
 	private String exchange;
-	
-	private Date tradeDate;
+	@Column(name="DAY_NUM")
+	private int dayNum;
 	
 	
 
-	public Date getTradeDate() {
-		return tradeDate;
-	}
-
-	public void setTradeDate(Date tradeDate) {
-		this.tradeDate = tradeDate;
-	}
 
 	public Long getId() {
 		return id;
